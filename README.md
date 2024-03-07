@@ -24,7 +24,7 @@ Les données sur les tueurs en série sont utilisées par des statisticiens, des
 
 ## Sources
 
-### Visuels
-- https://codepen.io/stiil/pen/rLwONd
-- https://codepen.io/rglazebrook/pen/nbPeBm
-- https://dribbble.com/shots
+https://www.kaggle.com/datasets/abdullahsamiir/serial-killers-wiki
+https://www.kaggle.com/datasets/vesuvius13/serial-killers-dataset
+https://worldpopulationreview.com/country-rankings/countries-with-the-most-serial-killers
+https://worldpopulationreview.com/state-rankings/serial-killers-by-state
