@@ -12,12 +12,19 @@ Les données sur les tueurs en série par état aux États-Unis sont compilées 
 
 ## Description
 
-Les données sont structurées de manière à répertorier les tueurs en série et à inclure des informations telles que leurs noms, leurs régions et périodes d’activité, leur âge, leur nombre de victimes, la peine à laquelle ils ont été condamnés, ainsi que certaines spécificités sur leurs crimes.
+Les données recensent les tueurs en série et incluent des informations telles que leurs noms, leurs régions et périodes d’activité, leur âge, leur nombre de victimes, la peine à laquelle ils ont été condamnés ainsi que certaines spécificités sur leurs crimes.
 
-## Objectif
+## But
 
-L'objectif de ce projet est d'explorer le nombre de tueurs en série répertoriés dans chaque État des États-Unis, de déterminer où se concentre le plus grand nombre d'entre eux, et de dresser une liste des plus connus en spécifiant l'arme utilisée ainsi que le nombre de meurtres commis par chacun d'eux.
+Les tueurs en série sont de plus en plus présents dans notre société, comme en témoigne leur popularité croissante dans les séries sur les plateformes comme Netflix. L'objectif de ce projet est d'explorer le nombre de tueurs en série répertoriés dans chaque État des États-Unis, de déterminer où se concentre le plus grand nombre d'entre eux, et de dresser une liste des plus connus en spécifiant l'arme utilisée ainsi que le nombre de meurtres commis par chacun d'eux.
 
 ## Références
 
 Les données sur les tueurs en série sont utilisées par des statisticiens, des universités (psychologie, sciences criminelles, etc.), et des organisations gouvernementales pour diverses fins telles que la recherche, l'étude psychologique et la compréhension des schémas de comportement de ces individus. Les références spécifiques à l'utilisation de ces données dans d'autres contextes peuvent être trouvées dans les publications académiques, les rapports gouvernementaux et d'autres sources de recherche.
+
+## Sources
+
+### Visuels
+- https://codepen.io/stiil/pen/rLwONd
+- https://codepen.io/rglazebrook/pen/nbPeBm
+- https://dribbble.com/shots
