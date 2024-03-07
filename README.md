@@ -5,7 +5,7 @@
 Les données utilisées dans ce projet proviennent de deux sources principales : Kaggle et World Population Review.
 
 ### Kaggle
-Les données ont été créées par ABDULLAHSAMIIR et sont disponibles sur Kaggle. Elles ont été conçues pour permettre aux débutants en manipulation de données avec Pandas, une bibliothèque Python, de pratiquer leurs compétences. Les informations proviennent d'une variété de pages de Wikipedia et incluent des détails sur les tueurs en série tels que leurs noms, leurs régions d'activité, le nombre de victimes, etc. Le format des données est un fichier CSV.
+Les données ont été créées par ABDULLAHSAMIIR et SAGAR KHANNA et sont disponibles sur Kaggle. Celles de ABDULLAHSAMIIR ont été conçues pour permettre aux débutants en manipulation de données avec Pandas, une bibliothèque Python, de pratiquer leurs compétences. Celles de SAGAR KHANNA ont été mises à disposition à but informatif et ludique. Les informations proviennent d'une variété de pages de Wikipedia et incluent des détails sur les tueurs en série tels que leurs noms, leurs régions d'activité, le nombre de victimes, etc. Le format des données est un fichier CSV.
 
 ### World Population Review
 Les données sur les tueurs en série par état aux États-Unis sont compilées par World Population Review à partir de diverses sources, notamment les archives du FBI, les rapports de police, les études académiques et les enquêtes journalistiques. Ces données sont présentées dans le but de fournir une vue d'ensemble des tueurs en série aux États-Unis, y compris leur répartition géographique et d'autres caractéristiques démographiques. Le format des données est à la fois CSV et JSON.
