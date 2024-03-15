@@ -23,7 +23,7 @@ Les tueurs en série sont de plus en plus présents dans notre société, comme 
 Les données sur les tueurs en série sont utilisées par des statisticiens, des universités (psychologie, sciences criminelles, etc.), et des organisations gouvernementales pour diverses fins telles que la recherche, l'étude psychologique et la compréhension des schémas de comportement de ces individus. Les références spécifiques à l'utilisation de ces données dans d'autres contextes peuvent être trouvées dans les publications académiques, les rapports gouvernementaux et d'autres sources de recherche.
 
 ## Wireframes
-https://www.figma.com/file/8jPXyKxRmUwhO1mYNxRjba/visualDon?type=design&node-id=0-1&mode=design&t=PhrmMFC5JRx8kwBR-0
+https://www.figma.com/file/8jPXyKxRmUwhO1mYNxRjba/visualDon?type=design&mode=design&t=RX24B4wbFWQbIE6o-1
 
 ## Sources
 
