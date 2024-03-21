@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galerie de photos</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+  }
+  h1 {
+    color: #333;
+  }
+  .photo-grid {
+    display: grid;
+    grid-gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .photo-item {
+    text-align: center;
+  }
+  .photo-title {
+    margin-top: 10px;
+    color: #666;
+  }
+  .photo-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Media Queries pour la mise en page responsive */
+  @media screen and (min-width: 768px) {
+    .photo-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .photo-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>Galerie de photos</h1>
+
+<div class="photo-grid">
+  <div class="photo-item">
+    <a href="lien_image1.html" class="photo-link">
+      <img src="image1.jpg" alt="Photo 1" style="max-width: 100%;" width="100%">
+      <div class="photo-title">Titre de la photo 1</div>
+    </a>
+  </div>
+  <!-- Répétez pour les autres photos -->
+</div>
+
+</body>
+</html>
