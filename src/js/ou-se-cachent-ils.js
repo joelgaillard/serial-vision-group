@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('./data/ou-se-cachent-ils.json')
+    fetch('/data/ou-se-cachent-ils.json')
         .then(response => response.json())
         .then(data => {
             const grid = document.getElementById('grid');
