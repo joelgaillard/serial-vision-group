@@ -1,65 +1,237 @@
-body {
+body, html {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    background: #eaeaea;
+    background-color: #eaeaea;
 }
 
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 5vmin;
+.hex-map {
+    position: relative;
+    width: max-content;
+    margin: auto;
+    transform: scale(0.7); /* Ajustez à la taille de votre fenêtre */
 }
 
 .hex {
-    width: 60px;
-    height: 70px;
+    width: 80px; 
+    height: 92px; 
     background-color: #640;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     color: white;
-    margin: 1vmin;
-    position: relative;
-}
-
-.hex::after {
-    content: '';
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 35px;
-    background-color: inherit;
-    clip-path: polygon(50% 100%, 100% 75%, 100% 25%, 50% 0%, 0% 25%, 0% 75%);
-    display: none;
 }
 
-.hex:hover::after {
-    display: block;
+
+/* Style spécifique pour l'Alaska et Hawaï */
+
+
+
+/* Vous devez créer un style pour chaque état en fonction de leur position */
+
+#ak {
+    top: 20px;
+    left: 20px;
+}
+#al {
+    top: 0px;
+    left: 120.0px;
+}
+#ar {
+    top: 0px;
+    left: 240.0px;
+}
+#az {
+    top: 0px;
+    left: 360.0px;
+}
+#ca {
+    top: 0px;
+    left: 480.0px;
+}
+#co {
+    top: 0px;
+    left: 600.0px;
+}
+#ct {
+    top: 0px;
+    left: 720.0px;
+}
+#de {
+    top: 0px;
+    left: 840.0px;
+}
+#fl {
+    top: 0px;
+    left: 960.0px;
+}
+#ga {
+    top: 0px;
+    left: 1080.0px;
 }
 
-.hex-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
-    font-size: 0.8em;
-    cursor: pointer;
+#hi {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#ia {
+    top: 184px;
+    left: 120.0px;
+}
+#id {
+    top: 184px;
+    left: 240.0px;
+}
+#il {
+    top: 184px;
+    left: 360.0px;
+}
+#in {
+    top: 184px;
+    left: 480.0px;
+}
+#ks {
+    top: 184px;
+    left: 600.0px;
+}
+#ky {
+    top: 184px;
+    left: 720.0px;
+}
+#la {
+    top: 184px;
+    left: 840.0px;
+}
+#ma {
+    top: 184px;
+    left: 960.0px;
+}
+#md {
+    top: 184px;
+    left: 1080.0px;
+}
+#me {
+    top: 368px;
+    left: 0.0px;
+}
+#mi {
+    top: 368px;
+    left: 120.0px;
+}
+#mn {
+    top: 368px;
+    left: 240.0px;
+}
+#mo {
+    top: 368px;
+    left: 360.0px;
 }
 
-.hex-title {
-    font-weight: bold;
-    font-size: 1.2em;
+#ms {
+    top: 368px;
+    left: 480.0px;
+}
+#mt {
+    top: 368px;
+    left: 600.0px;
+}
+#nc {
+    top: 368px;
+    left: 720.0px;
+}
+#nd {
+    top: 368px;
+    left: 840.0px;
+}
+#ne {
+    top: 368px;
+    left: 960.0px;
+}
+#nh {
+    top: 368px;
+    left: 1080.0px;
+}
+#nj {
+    top: 552px;
+    left: 0.0px;
+}
+#nm {
+    top: 552px;
+    left: 120.0px;
+}
+#nv {
+    top: 552px;
+    left: 240.0px;
+}
+#ny {
+    top: 552px;
+    left: 360.0px;
+}
+#oh {
+    top: 552px;
+    left: 480.0px;
+}
+#ok {
+    top: 552px;
+    left: 600.0px;
+}
+#or {
+    top: 552px;
+    left: 720.0px;
+}
+#pa {
+    top: 552px;
+    left: 840.0px;
+}
+#ri {
+    top: 552px;
+    left: 960.0px;
+}
+#sc {
+    top: 552px;
+    left: 1080.0px;
+}
+#sd {
+    top: 736px;
+    left: 0.0px;
+}
+#tn {
+    top: 736px;
+    left: 120.0px;
+}
+#tx {
+    top: 736px;
+    left: 240.0px;
+}
+#ut {
+    top: 736px;
+    left: 360.0px;
+}
+#va {
+    top: 736px;
+    left: 480.0px;
+}
+#vt {
+    top: 736px;
+    left: 600.0px;
+}
+#wa {
+    top: 736px;
+    left: 720.0px;
 }
 
-/* Adjust for hexagon offsets */
-.row {
-    display: flex;
+#wi {
+    top: 736px;
+    left: 840.0px;
+}
+#wv {
+    top: 736px;
+    left: 960.0px;
+}
+#wy {
+    top: 736px;
+    left: 1080.0px;
 }
 
-.row:nth-child(odd) .hex {
-    margin-left: 30px;
-}
