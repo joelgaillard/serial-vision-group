@@ -1,56 +1,60 @@
 @font-face {
-    font-family: "Blacklisted";
-    src: url("/assets/fonts/Blacklisted.ttf");
-  }
+  font-family: "Blacklisted";
+  src: url("/assets/fonts/Blacklisted.ttf");
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px;
-    background-color: #333;
-    font-family: "Montserrat", sans-serif;
-  }
-  h1 {
-    color: #ca1414;
-    font-family: "Blacklisted";
-    font-size: 50px;
-    margin-top: 5px;
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+  background-color: #333;
+  font-family: "Montserrat", sans-serif;
+}
+h1 {
+  color: #ca1414;
+  font-family: "Blacklisted";
+  font-size: 50px;
+  margin-top: 5px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.photo-item {
+  text-align: center;
+}
+
+
+.photo-item:hover {
+  transform: scale(0.95);
+  opacity: 0.7;
+  filter: contrast(150%) saturate(100%) hue-rotate(0deg) brightness(100%)
+    opacity(0.5) drop-shadow(0px 0px 0px #ca1414);
+}
+
+.photo-title {
+    margin-top: 10px;
+    color: #ffffff;
+    font-weight: bold;
   }
   
+.photo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Media Queries pour la mise en page responsive */
+@media screen and (min-width: 768px) {
   .photo-grid {
-    display: grid;
-    grid-gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .photo-item {
-    text-align: center;
-  }
+}
 
-
-  .photo-item:hover {
-    transform: scale(0.95);
-    opacity: 0.7;
-    filter: contrast(150%) saturate(100%) hue-rotate(0deg) brightness(100%) opacity(0.5)  drop-shadow(0px 0px 0px #ca1414);
+@media screen and (min-width: 1024px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  .photo-title {
-    margin-top: 10px;
-    color: white;
-  }
-  .photo-link {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  /* Media Queries pour la mise en page responsive */
-  @media screen and (min-width: 768px) {
-    .photo-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    .photo-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
+}
