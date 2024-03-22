@@ -12,7 +12,7 @@ photoContainer.innerHTML = "";
             <div class="photo-item">
             <a href="fiche-tueur.html?nom=${encodeURIComponent(tueur.nom.toLowerCase())}" class="photo-link">
             <img src="/assets/img/${tueur.prenom.toLowerCase()}-${tueur.nom.toLowerCase()}.jpg" alt="${tueur.prenom} ${tueur.nom}" style="max-width: 100%;" width="100%">
-      <div class="photo-title">${tueur.prenom} ${tueur.nom}</div>
+      <div class="photo-title">${tueur.prenom.toUpperCase()} ${tueur.nom.toUpperCase()}</div>
     </a>
   </div>`;
             photoContainer.innerHTML += html;
