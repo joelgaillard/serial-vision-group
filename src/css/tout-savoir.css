@@ -4,7 +4,7 @@
   src: url("/assets/fonts/Blacklisted.ttf");
 }
 
-/*INDEX.HTML*/
+/*TOUT-SAVOIR.CSS*/
 h1 {
   font-size: 150px;
   font-family: "Blacklisted";
@@ -17,4 +17,32 @@ body {
   background-color: #272727;
   font-family: "Montserrat", sans-serif;
   text-align: center;
+}
+/*LIENS BOUTONS*/
+.buttonCacher {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: #ca1414;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.buttonCacher:hover {
+  background-color: #ca1414;
+  color: white;
+}
+
+.buttonConnus {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:#ca1414;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.buttonConnus:hover {
+  background-color: white;
+  color: #ca1414;
 }
