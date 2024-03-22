@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            width: 80%;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .photo {
+            margin-top: 20px;
+            max-width: 30%;
+        }
+
+        .text-lines {
+            margin-top: 20px;
+            flex: 1;
+            padding-left: 20px; /* Ajout de marge à gauche pour l'espace entre la photo et le texte */
+        }
+
+        .diagram {
+            margin-top: 20px;
+            width: 25%; /* Taille du diagramme en pourcentage */
+        }
+
+        .map {
+            margin-top: 20px;
+            width: 75%; /* Taille de la carte en pourcentage */
+            height: 400px; /* Hauteur de la carte */
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            Titre
+        </div>
+        <div class="buttons">
+            <button>Bouton 1</button>
+            <button>Bouton 2</button>
+        </div>
+    </div>
+    <div class="container">
+        <img class="photo" src="chemin/vers/votre/photo.jpg" alt="Photo">
+        <div class="text-lines">
+            <p>Ligne 1</p>
+            <p>Ligne 2</p>
+            <p>Ligne 3</p>
+            <p>Ligne 4</p>
+        </div>
+    </div>
+    <div class="container">
+        <svg class="diagram" width="100%" height="200"></svg>
+        <svg class="map" width="100%" height="400"></svg>
+    </div>
+
+    <!-- Vous devrez intégrer vos données et scripts pour les diagrammes D3 et la carte SVG -->
+
+</body>
+</html>
