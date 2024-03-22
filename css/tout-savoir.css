@@ -1,0 +1,20 @@
+/*POLICE*/
+@font-face {
+  font-family: "Blacklisted";
+  src: url("/assets/fonts/Blacklisted.ttf");
+}
+
+/*INDEX.HTML*/
+h1 {
+  font-size: 150px;
+  font-family: "Blacklisted";
+  text-align: center;
+  color: #ca1414;
+  margin-top: 150px;
+}
+
+body {
+  background-color: #272727;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
