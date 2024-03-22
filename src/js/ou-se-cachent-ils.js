@@ -3,18 +3,15 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => response.json())
         .then(data => {
             const grid = document.getElementById('grid');
-            data.forEach((stateData, index) => {
+            data.forEach((stateData) => {
                 let hexCell = document.createElement('div');
                 hexCell.className = 'hex';
                 hexCell.innerHTML = `
-                <div class="hex-title">${stateData.state}</div>
-                <div class="hex-details">
-                    <div>Victimes totales: ${stateData.SerialKillersTotalVictims1992 - 2019}</div>
-                    <div>Tueur le plus connu: ${stateData.SerialKillersMostKnownKiller}</div>
-                    <div>Nombre de victimes: ${stateData.SerialKillersMkNumVictims}</div>
-                    <div>Statut final: ${stateData.SerialKillersMkFinalStatus}</div>
-                </div>
-            `;
+                    <div class="hex-content">
+                        <span class="state-abbr">${stateData.state.slice(0, 2).toUpperCase()}</span>
+                        <span class="details">Victimes: ${stateData.SerialKillersTotalVictims1992 - 2019}</span>
+                    </div>
+                `;
                 grid.appendChild(hexCell);
             });
         })
