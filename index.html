@@ -1,17 +1,123 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bienvenue</title>
-    <link rel="stylesheet" href="./src/css/index.css" />
-  </head>
-  <body>
-    <h1>Bienvenue</h1>
 
-    <div class="button-container">
-      <a href="./src/html/quiz.html" class="button1">Quel tueur en série es-tu ?</a>
-      <a href="./src/html/tout-savoir.html" class="button2">Parcourir les données</a>
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SerialVision</title>
+  <link rel="stylesheet" href="./src/css/structure.css" />
+  <script src="./src/index.js" type="module" defer></script>
+</head>
+
+<body>
+  <main>
+    <section id="accueil-section">
+      <h1>Bienvenue</h1>
+      <div class="button-container">
+        <a href="#question" class="button1">Quel tueur en série es-tu ?</a>
+        <a href="#about" class="button2">Parcourir les données</a>
+      </div>
+    </section>
+
+    <section id="about-section">
+      <h1>Tout savoir</h1>
+      <a href="#infos" class="buttonCacher">Où se trouvent les tueurs en série ?</a>
+      <a href="#tueurs" class="buttonConnus">Découvrir les pires tueurs en série !</a>
+    </section>
+
+    <section id="tueurs-section">
+      <h1>Les plus connus d’entre eux</h1>
+      <div class="photo-grid">
+        <div class="photo-item">
+          <a href="lien_image1.html" class="photo-link">
+            <img src="image1.jpg" alt="Photo 1" style="max-width: 100%;" width="100%">
+            <div class="photo-title">Titre de la photo 1</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="tueur-section">
+      <body>
+        <div class="container">
+          <h1>Titre</h1>
+          <div class="buttons">
+            <a href="#tueurs" class="button1">Liste des tueurs</a>
+            <a href="#accueil" class="button2">Page d’accueil</a>
+          </div>
+        </div>
+        <div class="container">
+          <img class="photo" src="chemin/vers/votre/photo.jpg" alt="Photo">
+          <div class="text-lines">
+          </div>
+        </div>
+        <div class="container">
+          <div class="diagram-container">
+            <svg class="diagram" height="300"></svg>
+          </div>
+          <svg class="map" width="100%" height="400"></svg>
+        </div>
+        <!-- Vous devrez intégrer vos données et scripts pour les diagrammes D3 et la carte SVG -->
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+    </section>
+
+    <section id="infos-section">
+      <div class="hex-map">
+          <div class="hex" id="ak">AK</div>
+          <div class="hex" id="al">AL</div>
+          <div class="hex" id="ar">AR</div>
+          <div class="hex" id="az">AZ</div>
+          <div class="hex" id="ca">CA</div>
+          <div class="hex" id="co">CO</div>
+          <div class="hex" id="ct">CT</div>
+          <div class="hex" id="de">DE</div>
+          <div class="hex" id="fl">FL</div>
+          <div class="hex" id="ga">GA</div>
+          <div class="hex" id="hi">HI</div>
+          <div class="hex" id="ia">IA</div>
+          <div class="hex" id="id">ID</div>
+          <div class="hex" id="il">IL</div>
+          <div class="hex" id="in">IN</div>
+          <div class="hex" id="ks">KS</div>
+          <div class="hex" id="ky">KY</div>
+          <div class="hex" id="la">LA</div>
+          <div class="hex" id="ma">MA</div>
+          <div class="hex" id="md">MD</div>
+          <div class="hex" id="me">ME</div>
+          <div class="hex" id="mi">MI</div>
+          <div class="hex" id="mn">MN</div>
+          <div class="hex" id="mo">MO</div>
+          <div class="hex" id="ms">MS</div>
+          <div class="hex" id="mt">MT</div>
+          <div class="hex" id="nc">NC</div>
+          <div class="hex" id="nd">ND</div>
+          <div class="hex" id="ne">NE</div>
+          <div class="hex" id="nh">NH</div>
+          <div class="hex" id="nj">NJ</div>
+          <div class="hex" id="nm">NM</div>
+          <div class="hex" id="nv">NV</div>
+          <div class="hex" id="ny">NY</div>
+          <div class="hex" id="oh">OH</div>
+          <div class="hex" id="ok">OK</div>
+          <div class="hex" id="or">OR</div>
+          <div class="hex" id="pa">PA</div>
+          <div class="hex" id="ri">RI</div>
+          <div class="hex" id="sc">SC</div>
+          <div class="hex" id="sd">SD</div>
+          <div class="hex" id="tn">TN</div>
+          <div class="hex" id="tx">TX</div>
+          <div class="hex" id="ut">UT</div>
+          <div class="hex" id="va">VA</div>
+          <div class="hex" id="vt">VT</div>
+          <div class="hex" id="wa">WA</div>
+          <div class="hex" id="wi">WI</div>
+          <div class="hex" id="wv">WV</div>
+          <div class="hex" id="wy">WY</div>
+      </div>
+      <script src="./src/sections/infos.js" type="module"> </script>
+    </section>
+
+  </main>
+</body>
+
 </html>

@@ -1,0 +1,7 @@
+main section {
+    display: none;
+}
+
+main section.active {
+    display: inherit;
+}

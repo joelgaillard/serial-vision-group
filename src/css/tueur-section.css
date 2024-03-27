@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page</title>
-    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -67,33 +59,3 @@
             width: 100%;
             height: auto;
         }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <h1>Titre</h1>
-        <div class="buttons">
-            <a href="les-plus-connus.html" class="button1">Liste des tueurs</a>
-            <a href="./index.html" class="button2">Page d’accueil</a>
-        </div>
-    </div>
-    <div class="container">
-        <img class="photo" src="chemin/vers/votre/photo.jpg" alt="Photo">
-        <div class="text-lines">
-        </div>
-    </div>
-    <div class="container">
-        <div class="diagram-container">
-            <svg class="diagram" height="300"></svg>
-        </div>
-        <svg class="map" width="100%" height="400"></svg>
-    </div>
-
-    <!-- Vous devrez intégrer vos données et scripts pour les diagrammes D3 et la carte SVG -->
-
-</body>
-<script src="https://d3js.org/d3.v7.min.js"></script>
-<script type="module" src="/src/js/fiche-tueur.js"></script>
-
-</html>
