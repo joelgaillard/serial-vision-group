@@ -63,22 +63,29 @@ const displayKiller = async (id) => {
     afficheInfosTueur(tueur)
 }
 
-// Affichage du diagramme à barres
 const displayDiagramme = async (id) => {
-    // Efface le contenu précédent du conteneur
-    document.querySelector(".diagram-container").innerHTML = "";
 
-    // Définition des marges et des dimensions du graphique
-    const margin = { top: 30, right: 30, bottom: 30, left: 30 };
-    const width = 300 - margin.left - margin.right;
-    const height = 200 - margin.top - margin.bottom;
+    d3.select(".diagram-container").select("svg").remove();
+    
+    // Définition des dimensions et des marges du graphique
+    const margin = { top: 10, right: 30, bottom: 90, left: 40 };
+    const width = 600 - margin.left - margin.right;
+    const height = 450 - margin.top - margin.bottom;
 
-    // Chargement des données du tueur
-    const data = await loadKillerById(id);
+    // Sélection de l'élément SVG container
+    const svg = d3.select(".diagram-container")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    // Extraction des années et calcul du nombre de victimes par année
+    // Chargement des données du tueur en utilisant l'identifiant fourni
+    const tueur = await loadKillerById(id);
+
+    // Création d'un objet pour stocker le nombre de victimes par année
     const yearsData = {};
-    data.victimes.forEach(victim => {
+    tueur.victimes.forEach(victim => {
         const year = victim.date;
         if (!yearsData[year]) {
             yearsData[year] = 0;
@@ -86,62 +93,82 @@ const displayDiagramme = async (id) => {
         yearsData[year]++;
     });
 
-    // Conversion des données en tableau d'objets pour D3
-    const myData = Object.keys(yearsData).map(year => ({ year: parseInt(year), victims: yearsData[year] }));
+    // Transformation de l'objet en tableau de données exploitable pour le graphique
+    const data = Object.keys(yearsData).map(year => ({ year: parseInt(year), victims: yearsData[year] }));
 
-    // Ajout du conteneur SVG
-    const monSvg = d3.select(".diagram-container")
-        .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .style("background-color", "lightgrey")
-        .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    // Echelle pour l'axe des abscisses
+    const x = d3.scaleBand()
+        .domain(data.map(d => d.year.toString()))
+        .range([0, width])
+        .padding(0.2);
 
-    // Echelles pour les axes
-    const xScale = d3.scaleBand()
-    .domain(myData.map(d => d.year))
-    .range([0, width]);
-
-    const yScale = d3.scaleLinear()
-        .domain([0, d3.max(myData, d => d.victims)])
+    // Echelle pour l'axe des ordonnées
+    const y = d3.scaleLinear()
+        .domain([0, d3.max(data, d => d.victims)])
         .range([height, 0]);
 
-    // Largeur fixe des rectangles
-// Calculer la largeur disponible pour chaque rectangle
-const barSpacing = 15; // Définissez l'espace blanc souhaité entre chaque rectangle
-const barWidth = 40; // Largeur fixe des rectangles
+    // Ajout de l'axe des abscisses
+    svg.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(d3.axisBottom(x))
+        .selectAll("text")
+        // .attr("transform", "translate(10,0)")
+        // .style("text-anchor", "end");
 
-// Dessiner les rectangles
-monSvg.selectAll('rect')
-    .data(myData)
-    .enter()
-    .append('rect')
-    .attr('x', (d, i) => (i * (barWidth + barSpacing))) // Ajoutez l'espace blanc entre chaque rectangle
-    .attr('y', d => yScale(d.victims))
-    .attr('width', barWidth)
-    .attr('height', d => height - yScale(d.victims))
-    .attr('fill', 'darkred');
+    // Ajout de l'axe des ordonnées
+    svg.append("g")
+        .call(d3.axisLeft(y).ticks(d3.max(data, d => d.victims)));
 
-// Dessiner les axes
-const xAxis = d3.axisBottom(xScale);
-monSvg.append('g')
-    .attr("transform", "translate(0," + height + ")")
-    .call(xAxis)
-    .selectAll("text") // Sélectionne tous les textes sur l'axe des X
-    .style("text-anchor", "middle") // Centre le texte
-    .attr("x", (d, i) => (i * (barWidth + barSpacing)) + (barWidth / 2) + margin.left) // Ajuste la position horizontale du texte pour le centrer sous chaque rectangle
-    .attr("y", "1em"); // Place le texte en dessous des rectangles
-
-// Dessiner les axes
-const yAxis = d3.axisLeft(yScale)
-    .ticks(d3.max(myData, d => d.victims)); // Limite le nombre de graduations sur l'axe Y
-monSvg.append('g')
-    .call(yAxis);
+    // Création des barres
+    svg.selectAll("rect")
+        .data(data)
+        .enter()
+        .append("rect")
+        .attr("x", d => x(d.year.toString()))
+        .attr("y", d => y(0)) // Barres commencent à y = 0
+        .attr("width", x.bandwidth())
+        .attr("height", 0) // Hauteur initiale à 0
+        .attr("fill", "#ca1414")
+        .transition()
+        .duration(800)
+        .attr("y", d => y(d.victims)) // Animation de la transition de y
+        .attr("height", d => height - y(d.victims)) // Animation de la transition de la hauteur
+        .delay((d, i) => i * 100); // Délai progressif pour chaque barre
 };
 
+const displayCarte = async (id) => {
+// The svg
+const svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height");
+
+// Map and projection
+const projection = d3.geoMercator()
+    .center([2, 47])                // GPS of location to zoom on
+    .scale(980)                       // This is like the zoom
+    .translate([ width/2, height/2 ])
+
+// Load external data and boot
+d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson").then( function(data){
+
+    // Filter data
+    data.features = data.features.filter(d => {console.log(d.properties.name); return d.properties.name=="France"})
+
+    // Draw the map
+    svg.append("g")
+        .selectAll("path")
+        .data(data.features)
+        .join("path")
+          .attr("fill", "grey")
+          .attr("d", d3.geoPath()
+              .projection(projection)
+          )
+        .style("stroke", "none")
+})
+}
 
 
 
 
-export {displayKillers, displayKiller, displayDiagramme}
+
+export {displayKillers, displayKiller, displayDiagramme, displayCarte}

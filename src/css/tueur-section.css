@@ -37,15 +37,6 @@
             /* Ajout de marge à gauche pour l'espace entre la photo et le texte */
         }
 
-        .diagram-container {
-            margin-top: 20px;
-            width: 50%; /* Largeur fixe du conteneur du diagramme */
-            overflow-x: auto; /* Activation du défilement horizontal */
-        }
-
-        .diagram {
-            height: 300px; /* Hauteur du diagramme */
-        }
 
         .map {
             margin-top: 20px;
@@ -55,7 +46,6 @@
             /* Hauteur de la carte */
         }
 
-        svg {
-            width: 100%;
-            height: auto;
+        .diagram-container {
+            overflow: auto;
         }
