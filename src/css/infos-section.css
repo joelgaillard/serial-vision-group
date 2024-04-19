@@ -14,7 +14,7 @@ body, html {
 .hex {
     width: 80px; 
     height: 92px; 
-    background-color: #640;
+    background-color: pink;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -28,210 +28,209 @@ body, html {
 
 
 
-/* Vous devez créer un style pour chaque état en fonction de leur position */
+/* Créer un style pour chaque état en fonction de sa position */
 
 #ak {
-    top: 20px;
+    top: 0px;
     left: 20px;
 }
 #al {
-    top: 0px;
-    left: 120.0px;
-}
-#ar {
-    top: 0px;
-    left: 240.0px;
-}
-#az {
-    top: 0px;
-    left: 360.0px;
-}
-#ca {
-    top: 0px;
-    left: 480.0px;
-}
-#co {
-    top: 0px;
+    top: 436px;
     left: 600.0px;
 }
+#ar {
+    top: 367px;
+    left: 480.0px;
+}
+#az {
+    top: 436px;
+    left: 280.0px;
+}
+#ca {
+    top: 367px;
+    left: 160.0px;
+}
+#co {
+    top: 298px;
+    left: 280px;
+}
 #ct {
-    top: 0px;
-    left: 720.0px;
+    top: 229px;
+    left: 880.0px;
 }
 #de {
-    top: 0px;
-    left: 840.0px;
+    top: 298px;
+    left: 840px;
 }
 #fl {
-    top: 0px;
-    left: 960.0px;
+    top: 505px;
+    left: 640.0px;
 }
 #ga {
-    top: 0px;
-    left: 1080.0px;
+    top: 436px;
+    left: 680.0px;
 }
 
 #hi {
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 516px;
+    left: 0px;
 }
 #ia {
-    top: 184px;
-    left: 120.0px;
+    top: 229px;
+    left: 400.0px;
 }
 #id {
-    top: 184px;
-    left: 240.0px;
+    top: 229px;
+    left: 160.0px;
 }
 #il {
-    top: 184px;
-    left: 360.0px;
-}
-#in {
-    top: 184px;
+    top: 229px;
     left: 480.0px;
 }
+#in {
+    top: 229px;
+    left: 560.0px;
+}
 #ks {
-    top: 184px;
-    left: 600.0px;
+    top: 367px;
+    left: 400.0px;
 }
 #ky {
-    top: 184px;
-    left: 720.0px;
+    top: 298px;
+    left: 520px;
 }
 #la {
-    top: 184px;
-    left: 840.0px;
+    top: 436px;
+    left: 440.0px;
 }
 #ma {
-    top: 184px;
-    left: 960.0px;
+    top: 160px;
+    left: 840.0px;
 }
 #md {
-    top: 184px;
-    left: 1080.0px;
+    top: 298px;
+    left: 760px;
 }
 #me {
-    top: 368px;
-    left: 0.0px;
+    top: 22px;
+    left: 920.0px;
 }
 #mi {
-    top: 368px;
-    left: 120.0px;
+    top: 160px;
+    left: 600.0px;
 }
 #mn {
-    top: 368px;
-    left: 240.0px;
+    top: 160px;
+    left: 360.0px;
 }
 #mo {
-    top: 368px;
-    left: 360.0px;
+    top: 298px;
+    left: 440px;
 }
 
 #ms {
-    top: 368px;
-    left: 480.0px;
+    top: 436px;
+    left: 520.0px;
 }
 #mt {
-    top: 368px;
-    left: 600.0px;
+    top: 160px;
+    left: 200.0px;
 }
 #nc {
-    top: 368px;
-    left: 720.0px;
+    top: 367px;
+    left: 640.0px;
 }
 #nd {
-    top: 368px;
-    left: 840.0px;
+    top: 160px;
+    left: 280.0px;
 }
 #ne {
-    top: 368px;
-    left: 960.0px;
+    top: 298px;
+    left: 360px;
 }
 #nh {
-    top: 368px;
-    left: 1080.0px;
+    top: 91px;
+    left: 880.0px;
 }
 #nj {
-    top: 552px;
-    left: 0.0px;
+    top: 229px;
+    left: 800.0px;
 }
 #nm {
-    top: 552px;
-    left: 120.0px;
+    top: 367px;
+    left: 320.0px;
 }
 #nv {
-    top: 552px;
-    left: 240.0px;
+    top: 298px;
+    left: 200px;
 }
 #ny {
-    top: 552px;
-    left: 360.0px;
+    top: 160px;
+    left: 760.0px;
 }
 #oh {
-    top: 552px;
-    left: 480.0px;
+    top: 229px;
+    left: 640.0px;
 }
 #ok {
-    top: 552px;
-    left: 600.0px;
-}
-#or {
-    top: 552px;
-    left: 720.0px;
-}
-#pa {
-    top: 552px;
-    left: 840.0px;
-}
-#ri {
-    top: 552px;
-    left: 960.0px;
-}
-#sc {
-    top: 552px;
-    left: 1080.0px;
-}
-#sd {
-    top: 736px;
-    left: 0.0px;
-}
-#tn {
-    top: 736px;
-    left: 120.0px;
-}
-#tx {
-    top: 736px;
-    left: 240.0px;
-}
-#ut {
-    top: 736px;
+    top: 436px;
     left: 360.0px;
 }
+#or {
+    top: 298px;
+    left: 120px;
+}
+#pa {
+    top: 229px;
+    left: 720.0px;
+}
+#ri {
+    top: 160px;
+    left: 920.0px;
+}
+#sc {
+    top: 367px;
+    left: 720.0px;
+}
+#sd {
+    top: 229px;
+    left: 320.0px;
+}
+#tn {
+    top: 367px;
+    left: 560.0px;
+}
+#tx {
+    top: 505px;
+    left: 400.0px;
+}
+#ut {
+    top: 367px;
+    left: 240.0px;
+}
 #va {
-    top: 736px;
-    left: 480.0px;
+    top: 298px;
+    left: 680px;
 }
 #vt {
-    top: 736px;
-    left: 600.0px;
+    top: 91px;
+    left: 800.0px;
 }
 #wa {
-    top: 736px;
-    left: 720.0px;
+    top: 160px;
+    left: 120.0px;
 }
 
 #wi {
-    top: 736px;
-    left: 840.0px;
+    top: 160px;
+    left: 440.0px;
 }
 #wv {
-    top: 736px;
-    left: 960.0px;
+    top: 298px;
+    left: 600px;
 }
 #wy {
-    top: 736px;
-    left: 1080.0px;
+    top: 229px;
+    left: 240.0px;
 }
 
