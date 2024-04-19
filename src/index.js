@@ -1,6 +1,6 @@
 import { displaySection, loadSectionCSS } from "./helpers"
 
-import { displayKillers, displayKiller } from "./sections/tueurs"
+import { displayKillers, displayKiller, displayDiagramme,  } from "./sections/tueurs"
 
 const routeur = () => {
     const hash = window.location.hash || '#accueil'
@@ -32,6 +32,7 @@ const routeur = () => {
         if(hashs[1]) {
           displaySection('tueur')
           displayKiller(hashs[1])
+          displayDiagramme(hashs[1])
           loadSectionCSS()
 
         } else {
