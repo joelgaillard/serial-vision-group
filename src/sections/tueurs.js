@@ -13,7 +13,7 @@ loadKillers().then((tueurs) => {
             const html = `
             <div class="photo-item">
             <a href="#tueurs-${tueur.id}" class="photo-link">
-            <img src="./assets/img/${tueur.prenom.toLowerCase()}-${tueur.nom.toLowerCase()}.jpg" alt="${tueur.prenom} ${tueur.nom}" style="max-width: 100%;" width="100%">
+            <img src="./assets/img/portraits/${tueur.prenom.toLowerCase()}-${tueur.nom.toLowerCase()}.jpg" alt="${tueur.prenom} ${tueur.nom}" style="max-width: 100%;" width="100%">
       <div class="photo-title">${tueur.prenom.toUpperCase()} ${tueur.nom.toUpperCase()}</div>
     </a>
   </div>`;
@@ -28,7 +28,7 @@ const afficheInfosTueur = (tueur) => {
     const blocTexte = document.querySelector(".text-lines");
 
     titre.innerHTML = `${tueur.nom} ${tueur.prenom}`;
-    photo.src = `/assets/img/${tueur.prenom.toLowerCase()}-${tueur.nom.toLowerCase()}.jpg`
+    photo.src = `/assets/img/portraits/${tueur.prenom.toLowerCase()}-${tueur.nom.toLowerCase()}.jpg`
 
     blocTexte.innerHTML = "";    
         
@@ -137,34 +137,18 @@ const displayDiagramme = async (id) => {
 };
 
 const displayCarte = async (id) => {
-// The svg
-const svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height");
-
-// Map and projection
-const projection = d3.geoMercator()
-    .center([2, 47])                // GPS of location to zoom on
-    .scale(980)                       // This is like the zoom
-    .translate([ width/2, height/2 ])
-
-// Load external data and boot
-d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson").then( function(data){
-
-    // Filter data
-    data.features = data.features.filter(d => {console.log(d.properties.name); return d.properties.name=="France"})
-
-    // Draw the map
-    svg.append("g")
-        .selectAll("path")
-        .data(data.features)
-        .join("path")
-          .attr("fill", "grey")
-          .attr("d", d3.geoPath()
-              .projection(projection)
-          )
-        .style("stroke", "none")
-})
+    const chart = Choropleth(unemployment, {
+        id: d => d.id,
+        value: d => d.rate,
+        scale: d3.scaleQuantize,
+        domain: [1, 10],
+        range: d3.schemeBlues[9],
+        title: (f, d) => `${f.properties.name}, ${statemap.get(f.id.slice(0, 2)).properties.name}\n${d?.rate}%`,
+        features: counties,
+        borders: statemesh,
+        width: 975,
+        height: 610
+      })
 }
 
 
