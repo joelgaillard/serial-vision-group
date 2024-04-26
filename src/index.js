@@ -35,7 +35,7 @@ const routeur = () => {
           displaySection('tueur')
           displayKiller(hashs[1])
           displayDiagramme(hashs[1])
-          // displayCarte(hashs[1])
+          displayCarte(hashs[1])
           loadSectionCSS()
 
         } else {
