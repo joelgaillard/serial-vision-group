@@ -20,7 +20,9 @@ const routeur = () => {
         if(hashs[1]) {
           displaySection('question')
           displayQuestion(hashs[1])
-        } 
+        } else {
+          displaySection('question')
+        }
       break;
 
       case '#resultat':
