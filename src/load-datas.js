@@ -12,4 +12,7 @@ const loadKillerById = (id) => {
     });
 };
 
-export { loadKillers, loadKillerById, loadJson };
+const loadMap = () => loadJson("./data/carte-usa.json");
+
+
+export { loadKillers, loadKillerById, loadJson, loadMap };
