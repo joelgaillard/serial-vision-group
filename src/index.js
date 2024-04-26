@@ -21,7 +21,7 @@ const routeur = () => {
           displaySection('question')
           displayQuestion(hashs[1])
         } else {
-          displaySection('question')
+          displaySection('questionnaire')
         }
       break;
 
