@@ -38,13 +38,7 @@
         }
 
 
-        .map {
-            margin-top: 20px;
-            width: 75%;
-            /* Taille de la carte en pourcentage */
-            height: 400px;
-            /* Hauteur de la carte */
-        }
+
 
         .diagram-container {
             overflow: auto;

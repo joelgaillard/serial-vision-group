@@ -2,6 +2,8 @@ import { displaySection, loadSectionCSS } from "./helpers"
 
 import { displayKillers, displayKiller, displayDiagramme, displayCarte  } from "./sections/tueurs"
 
+import { displayHexagonMap } from "./sections/infos"
+
 const routeur = () => {
     const hash = window.location.hash || '#accueil'
     const hashs = hash.split('-')
@@ -47,6 +49,7 @@ const routeur = () => {
   
       case '#infos':
         displaySection('infos')
+        displayHexagonMap()
       break;
 
       case '#about':
