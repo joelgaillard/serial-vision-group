@@ -1,0 +1,53 @@
+/*POLICE*/
+@font-face {
+  font-family: "Blacklisted";
+  src: url("/assets/fonts/Blacklisted.ttf");
+}
+
+/*INDEX.HTML*/
+h1 {
+  font-size: 100px;
+  font-family: "Blacklisted";
+  text-align: center;
+  color: #ca1414;
+}
+
+h2 {
+  font-size: 50px;
+  font-family: "Montserrat", sans-serif;
+  text-align: right;
+  margin-right: 150px;
+  color: white;
+  margin-top: -70px;
+}
+
+body {
+  background-color: #272727;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button1 {
+  padding: 20px 30px;
+  background-color: #ca1414;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 200px;
+}
+
+.button1:hover {
+  background-color: white;
+  color: #ca1414;
+}
+
+.gif {
+  margin-top: -30px;
+  margin-right: 370px;
+}
