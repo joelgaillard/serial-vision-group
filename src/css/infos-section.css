@@ -1,0 +1,7 @@
+body {
+    background-color: #272727;
+}
+
+.infos-diagram-container {
+    overflow: auto;
+}

@@ -14,5 +14,9 @@ const loadKillerById = (id) => {
 
 const loadMap = () => loadJson("./data/carte-usa.json");
 
+const loadHexagonMap = () => loadJson("./data/carte-hexagon.json");
 
-export { loadKillers, loadKillerById, loadJson, loadMap };
+const loadSerialKillersData = () => loadJson("./data/ou-se-cachent-ils.json");
+
+
+export { loadKillers, loadKillerById, loadJson, loadMap, loadHexagonMap, loadSerialKillersData };

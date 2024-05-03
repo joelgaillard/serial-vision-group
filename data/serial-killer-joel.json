@@ -8,6 +8,7 @@
     "peine_encourue": "Peine de mort",
     "moyen_execution": "Chaise électrique",
     "mort": true,
+    "portrait":"ted-bundy.jpg",
     "date_deces": "24 janvier 1989",
     "victimes": [
       {
@@ -278,6 +279,7 @@
     "peine_encourue": "Peine de mort",
     "moyen_execution": "Battu à mort par un co-détenu en prison",
     "mort": true,
+    "portrait":"jeffrey-dahmer.jpg",
     "date_deces": "28 novembre 1994",
     "victimes": [
       {
@@ -380,6 +382,7 @@
     "date_de_naissance": "7 juin 1940",
     "peine_encourue": "Prison à perpétuité",
     "mort": false,
+    "portrait":"samuel-little.jpg",
     "victimes": [
       {
           "nom": "Mary",
@@ -880,6 +883,7 @@
     "date_de_naissance": "18 décembre 1948",
     "peine_encourue": "Prison à perpétuité",
     "mort": false,
+    "portrait":"edmund-kemper.jpg",
     "victimes": [
       {
         "nom": "Cynthia",
@@ -906,6 +910,7 @@
     "peine_encourue": "Peine de mort",
     "moyen_execution": "Mort naturelle en prison",
     "mort": true,
+    "portrait":"richard-ramirez.jpg",
     "date_deces": "7 juin 2013",
     "victimes": [
       {
@@ -934,6 +939,7 @@
     "moyen_execution": "Injection Létale",
     "mort": true,
     "date_deces": "10 mai 1994",
+    "portrait":"john-gacy.jpg",
     "victimes": [
       {
         "nom": "Timothy",

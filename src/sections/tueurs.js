@@ -26,7 +26,7 @@ const afficheInfosTueur = (tueur) => {
     const blocTexte = document.querySelector(".text-lines");
 
     titre.innerHTML = `${tueur.nom} ${tueur.prenom}`;
-    photo.src = `/assets/img/portraits/${tueur.prenom.toLowerCase()}-${tueur.nom.toLowerCase()}.jpg`
+    photo.src = `/assets/img/portraits/${tueur}`
 
     blocTexte.innerHTML = "";
 

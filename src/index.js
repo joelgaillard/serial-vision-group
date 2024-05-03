@@ -2,7 +2,7 @@ import { displaySection, loadSectionCSS } from "./helpers"
 
 import { displayKillers, displayKiller, displayDiagramme, displayCarte  } from "./sections/tueurs"
 
-import { displayHexagonMap } from "./sections/infos"
+import { displayHexagonMap, displayInfosDiagramme } from "./sections/infos"
 
 const routeur = () => {
     const hash = window.location.hash || '#accueil'
@@ -50,6 +50,7 @@ const routeur = () => {
       case '#infos':
         displaySection('infos')
         displayHexagonMap()
+        displayInfosDiagramme()
       break;
 
       case '#about':
