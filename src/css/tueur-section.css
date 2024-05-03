@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Blacklisted";
+  src: url("/assets/fonts/Blacklisted.ttf");
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,6 +10,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #272727;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {
@@ -16,7 +23,7 @@ body {
 }
 
 .title {
-  font-size: 100 px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -32,11 +39,51 @@ body {
 
 .text-lines {
   margin-top: 20px;
-  flex: 1;
   padding-left: 20px;
+  color: white;
+  font-size: 30px;
+  flex: 1;
   /* Ajout de marge à gauche pour l'espace entre la photo et le texte */
 }
 
 .diagram-container {
   overflow: auto;
+}
+
+h1 {
+  font-size: 100px;
+  font-family: "Blacklisted";
+  text-align: center;
+  color: #ca1414;
+}
+
+.button1 {
+  padding: 20px 30px;
+  background-color: #ca1414;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.button1:hover {
+  background-color: white;
+  color: #ca1414;
+}
+
+.button2 {
+  padding: 20px 30px;
+  background-color: white;
+  color: #ca1414;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.button2:hover {
+  background-color: #ca1414;
+  color: white;
+}
+
+p.surnom {
+  color: #ca1414;
+  font-weight: bold;
 }
