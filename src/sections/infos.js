@@ -57,7 +57,7 @@ const displayInfosDiagramme = async () => {
     d3.select(".infos-diagram-container").select("svg").remove();
 
     // Définition des dimensions et des marges du graphique
-    const margin = { top: 30, right: 100, bottom: 90, left: 100 };
+    const margin = { top: 0, right: 100, bottom: 90, left: 100 };
     const width = window.innerWidth - margin.left - margin.right;
     const height = 3000 - margin.top - margin.bottom;
 
@@ -89,10 +89,9 @@ const displayInfosDiagramme = async () => {
 
     // Ajout de l'axe des ordonnées
     svg.append("g")
-        .call(d3.axisLeft(y).ticks(10))
-        .style("color", "white")
-        .selectAll("text")
-        .attr("font-size", "12px");
+    .call(d3.axisLeft(y).ticks(10))
+    .selectAll(".tick line, .domain") // Sélectionne les lignes des ticks et la barre de l'axe
+    .style("display", "none"); // Masque les lignes des ticks et la barre de l'axe
 
         svg.selectAll(".label")
         .data(data)
@@ -105,6 +104,11 @@ const displayInfosDiagramme = async () => {
         .style("fill", "white")
         .style("font-size", "12px")
         .style("font-family", "Montserrat");
+
+        svg.selectAll(".tick text") // Sélectionne les textes des ticks
+    .attr("fill", "white") // Définit la couleur du texte à blanc
+    .style("font-size", "14px") // Définit la taille de la police
+    .style("font-weight", "bold"); // Définit le poids de la police à gras
 
 
     // Création des barres

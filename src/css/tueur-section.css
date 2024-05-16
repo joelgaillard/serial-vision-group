@@ -1,3 +1,4 @@
+/*POLICE*/
 @font-face {
   font-family: "Blacklisted";
   src: url("/assets/fonts/Blacklisted.ttf");
@@ -42,7 +43,6 @@ body {
   color: white;
   font-size: 30px;
   flex: 1;
-  /* Ajout de marge à gauche pour l'espace entre la photo et le texte */
 }
 
 .diagram-container {
@@ -86,27 +86,33 @@ p.surnom {
   color: #ca1414;
   font-weight: bold;
 }
+
 .title-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
 }
 
-h2, h3 {
-
+h2 {
+  text-align: center;
+  margin-right: 20px;
   font-size: 50px;
   font-family: "Montserrat", sans-serif;
   color: white;
 }
 
-h2 {
-  text-align: left;
-  margin-right: 20px; 
+.section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90vw;
 }
 
-h3 {
-  text-align: right;
-  margin-right: 270px; 
+.map-container {
+  margin-left: 20px;
 }
-
-

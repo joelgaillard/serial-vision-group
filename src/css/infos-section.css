@@ -1,32 +1,28 @@
 /*POLICE*/
 @font-face {
-    font-family: "Blacklisted";
-    src: url("/assets/fonts/Blacklisted.ttf");
-  }
-  
-  /*INDEX.HTML*/
-  h1 {
-    font-size: 100px;
-    font-family: "Blacklisted";
-    text-align: center;
-    color: #ca1414;
-  }
-  
-  h2 {
-    font-size: 50px;
-    font-family: "Montserrat", sans-serif;
-    text-align: left;
-    margin-right: 150px;
-    margin-left: 40px;
-    color: white;
-    margin-top: 70px;
-
-
-  }body {
-    background-color: #272727;
+  font-family: "Blacklisted";
+  src: url("/assets/fonts/Blacklisted.ttf");
 }
 
-.infos-diagram-container {
-    overflow: auto;
+/*INDEX.HTML*/
+h1 {
+  font-size: 6rem; /* Équivalent à 100px */
+  font-family: "Blacklisted";
+  text-align: left;
+  color: #ca1414;
+  margin-left: 4rem; /* Équivalent à 40px */
 }
 
+h2 {
+  font-size: 3.125rem; /* Équivalent à 50px */
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  margin-left: 4rem; /* Équivalent à 40px */
+  color: white;
+
+
+}
+
+body {
+  background-color: #272727;
+}

@@ -107,15 +107,35 @@ const displayDiagramme = async (id) => {
 
     // Ajout de l'axe des abscisses
     svg.append("g")
-        .attr("transform", `translate(0,${height})`)
-        .call(d3.axisBottom(x))
-        .selectAll("text")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x))
+    .selectAll(".tick line") // Sélectionne les lignes des ticks
+    .style("display", "none"); // Masque les lignes des ticks
+
+svg.selectAll(".domain") // Sélectionne la ligne de l'axe (la barre)
+    .style("display", "none"); // Masque la ligne de l'axe
+
+svg.selectAll(".tick text") // Sélectionne les textes des ticks
+    .attr("fill", "white"); // Définit la couleur du texte à blanc
+
+
     // .attr("transform", "translate(10,0)")
     // .style("text-anchor", "end");
 
     // Ajout de l'axe des ordonnées
     svg.append("g")
-        .call(d3.axisLeft(y).ticks(d3.max(data, d => d.victims)));
+    .call(d3.axisLeft(y).ticks(d3.max(data, d => d.victims)))
+    .selectAll(".tick line") // Sélectionne les lignes des ticks
+    .style("display", "none"); // Masque les lignes des ticks
+
+svg.selectAll(".domain") // Sélectionne la ligne de l'axe (la barre)
+    .style("display", "none"); // Masque la ligne de l'axe
+
+    svg.selectAll(".tick text") // Sélectionne les textes des ticks
+    .attr("fill", "white") // Définit la couleur du texte à blanc
+    .style("font-size", "14px") // Définit la taille de la police
+    .style("font-weight", "bold"); // Définit le poids de la police à gras
+// Définit la couleur du texte à blanc
 
     // Création des barres
     svg.selectAll("rect")
@@ -207,7 +227,7 @@ const maxVictims = Math.max(...dataArray.map(state => state.nbvictims));
 // Définir l'échelle de couleur
 const colorScale = d3.scaleLinear()
     .domain([0, maxVictims]) // Domaine de l'échelle: de 0 à maxVictims
-    .range(["white", "#ca1414"]) // Plage de l'échelle: du blanc au rouge
+    .range(["#272727", "#ca1414"]) // Plage de l'échelle: du blanc au rouge
 
 // Appliquer la couleur en fonction du nombre de victimes
 carte.selectAll("path")
@@ -218,9 +238,9 @@ carte.selectAll("path")
         .attr("id", d => d.properties.NAME)
         .attr("fill", d => {
             const stateInfo = dataArray.find(state => state.state === d.properties.NAME);
-            return stateInfo ? colorScale(stateInfo.nbvictims) : "white";
+            return stateInfo ? colorScale(stateInfo.nbvictims) : "#272727";
         })
-        .attr("stroke", "black") // Couleur du contour en noir
+        .attr("stroke", "white") // Couleur du contour en noir
         .attr("stroke-width", 1)
         .on("mouseover", function (event, d) {
             const stateInfo = dataArray.find(state => state.state === d.properties.NAME);
