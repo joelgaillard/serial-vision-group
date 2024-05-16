@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "Blacklisted";
+    src: url("/assets/fonts/Blacklisted.ttf");
+}
+body{
+    display: flex;
+    background-color: #272727;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+
+}
+
+h1{
+    font-size: 90px;
+    font-family: "Blacklisted";
+    text-align: left;
+    color: #ca1414;
+}
+
+h2{
+    font-size: 45px;
+    font-family: "Montserrat", sans-serif;
+    text-align: left;
+    margin-right: 150px;
+    color: white;
+    margin-top: -70px;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+  }
+  
+
+ 
+  
+  
+  
