@@ -1,40 +1,63 @@
 @font-face {
-    font-family: "Blacklisted";
-    src: url("/assets/fonts/Blacklisted.ttf");
+  font-family: "Blacklisted";
+  src: url("/assets/fonts/Blacklisted.ttf");
 }
-body{
-    display: flex;
-    background-color: #272727;
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-
-}
-
-h1{
-    font-size: 90px;
-    font-family: "Blacklisted";
-    text-align: left;
-    color: #ca1414;
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #272727;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
 }
 
-h2{
-    font-size: 45px;
-    font-family: "Montserrat", sans-serif;
-    text-align: left;
-    margin-right: 150px;
-    color: white;
-    margin-top: -70px;
+h1 {
+  font-size: 90px;
+  font-family: "Blacklisted";
+  text-align: left;
+  color: #ca1414;
+}
+
+h2 {
+  font-size: 45px;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  margin-right: 150px;
+  color: white;
+  margin-top: -70px;
 }
 
 .options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
- 
-  
-  
-  
+.question-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.option img {
+  max-width: 100%; /* Ajuste la taille maximale des images à 100% de la largeur de l'élément parent */
+  max-height: 300px; /* Définit une hauteur maximale pour les images */
+  height: auto; /* Garantit que les images conservent leur proportion */
+}
+
+p {
+  color: white;
+  font-size: 20px;
+}
+
+.option {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  flex-basis: calc(25% - 10px); /* Affiche les options comme des blocs */
+}
+
+.option p {
+  color: white;
+  font-size: 20px;
+  margin: 5px 0;
+}
