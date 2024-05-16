@@ -57,9 +57,9 @@ const displayInfosDiagramme = async () => {
     d3.select(".infos-diagram-container").select("svg").remove();
 
     // Définition des dimensions et des marges du graphique
-    const margin = { top: 10, right: 30, bottom: 90, left: 40 };
-    const width = 800 - margin.left - margin.right;
-    const height = 450 - margin.top - margin.bottom;
+    const margin = { top: 30, right: 100, bottom: 90, left: 100 };
+    const width = window.innerWidth - margin.left - margin.right;
+    const height = 3000 - margin.top - margin.bottom;
 
     // Sélection de l'élément SVG container
     const svg = d3.select(".infos-diagram-container")
@@ -70,54 +70,59 @@ const displayInfosDiagramme = async () => {
         .attr("transform", `translate(${margin.left},${margin.top})`);
 
     // Chargement des données sur les tueurs en série
-    const data = await loadSerialKillersData();
+    let data = await loadSerialKillersData();
 
-    console.log(data)
+    // Tri des données du plus grand au plus petit
+    data = data.sort((a, b) => b.SerialKillersTotalVictims19922019 - a.SerialKillersTotalVictims19922019);
 
     // Echelle pour l'axe des abscisses
-    const x = d3.scaleBand()
+    const y = d3.scaleBand()
         .domain(data.map(d => d.iso3166_2))
-        .range([0, width])
+        .range([0, height])
         .padding(0.2);
 
     // Echelle pour l'axe des ordonnées
-    const y = d3.scaleLinear()
+    const x = d3.scaleLinear()
         .domain([0, d3.max(data, d => d.SerialKillersTotalVictims19922019)])
-        .range([height, 0]);
+        .range([0, width]);
 
-    // Ajout de l'axe des abscisses
-    svg.append("g")
-        .attr("transform", `translate(0,${height})`)
-        .call(d3.axisBottom(x))
-        .selectAll("text")
-        .attr("transform", "rotate(-90)")
-        .style("text-anchor", "end")
-        .attr("dx", "-.8em")
-        .attr("dy", ".15em")
-        .attr("font-size", "12px");
 
     // Ajout de l'axe des ordonnées
     svg.append("g")
         .call(d3.axisLeft(y).ticks(10))
+        .style("color", "white")
         .selectAll("text")
         .attr("font-size", "12px");
+
+        svg.selectAll(".label")
+        .data(data)
+        .enter()
+        .append("text")
+        .attr("class", "label")
+        .attr("x", d => x(d.SerialKillersTotalVictims19922019) + 10)
+        .attr("y", d => y(d.iso3166_2) + 20)
+        .text(d => d.SerialKillersTotalVictims19922019)
+        .style("fill", "white")
+        .style("font-size", "12px")
+        .style("font-family", "Montserrat");
+
 
     // Création des barres
     svg.selectAll("rect")
         .data(data)
         .enter()
         .append("rect")
-        .attr("x", d => x(d.iso3166_2))
-        .attr("y", d => y(0)) // Barres commencent à y = 0
-        .attr("width", x.bandwidth())
-        .attr("height", 0) // Hauteur initiale à 0
+        .attr("x", d => x(0))
+        .attr("y", d => y(d.iso3166_2)) 
+        .attr("width", 0)
+        .attr("height", y.bandwidth()) // Hauteur initiale à 0
         .attr("fill", "#ca1414")
         .transition()
         .duration(800)
-        .attr("y", d => y(d.SerialKillersTotalVictims19922019)) // Animation de la transition de y
-        .attr("height", d => height - y(d.SerialKillersTotalVictims19922019)) // Animation de la transition de la hauteur
+        .attr("width", d => x(d.SerialKillersTotalVictims19922019)) // Animation de la transition de la hauteur
         .delay((d, i) => i * 100); // Délai progressif pour chaque barre
 };
+
 
 
 export { displayHexagonMap, displayInfosDiagramme };

@@ -11,7 +11,7 @@ const displayKillers = (url) => {
             const html = `
             <div class="photo-item">
             <a href="#tueurs-${tueur.id}" class="photo-link">
-            <img src="./assets/img/portraits/${tueur.prenom.toLowerCase()}-${tueur.nom.toLowerCase()}.jpg" alt="${tueur.prenom} ${tueur.nom}" style="max-width: 100%;" width="100%">
+            <img src="./assets/img/portraits/${tueur.portrait}" alt="${tueur.prenom} ${tueur.nom}" style="max-width: 100%;" width="100%">
       <div class="photo-title">${tueur.prenom.toUpperCase()} ${tueur.nom.toUpperCase()}</div>
     </a>
   </div>`;

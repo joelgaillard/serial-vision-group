@@ -956,5 +956,73 @@
         "moyen_execution": "Étranglement"
       }
     ]
+  },
+  {
+    "id": 7,
+    "nom": "Gaillard",
+    "prenom": "Joel",
+    "surnom": "Jojo le rigolo",
+    "date_de_naissance": "5 février 2001",
+    "peine_encourue": "Rien, il est sympa comme mec",
+    "mort": false,
+    "portrait":"joel-gaillard.gif",
+    "victimes": [
+      {
+        "nom": "Raymond",
+        "prenom": "Smith",
+        "date": "1990",
+        "lieu": "Wisconsin",
+        "moyen_execution": "Assassiné"
+      },
+      {
+        "nom": "Edward",
+        "prenom": "Smith",
+        "date": "1990",
+        "lieu": "Wisconsin",
+        "moyen_execution": "Assassiné"
+      },
+      {
+        "nom": "Ernest",
+        "prenom": "Miller",
+        "date": "1990",
+        "lieu": "Wisconsin",
+        "moyen_execution": "Assassiné"
+      },
+      {
+        "nom": "David",
+        "prenom": "Thomas",
+        "date": "1990",
+        "lieu": "Wisconsin",
+        "moyen_execution": "Assassiné"
+      },
+      {
+        "nom": "Curtis",
+        "prenom": "Straughter",
+        "date": "1991",
+        "lieu": "Wisconsin",
+        "moyen_execution": "Assassiné"
+      },
+      {
+        "nom": "Errol",
+        "prenom": "Lindsey",
+        "date": "1991",
+        "lieu": "Wisconsin",
+        "moyen_execution": "Assassiné"
+      },
+      {
+        "nom": "Tony",
+        "prenom": "Hughes",
+        "date": "1991",
+        "lieu": "Wisconsin",
+        "moyen_execution": "Assassiné"
+      },
+      {
+        "nom": "Konerak",
+        "prenom": "Sinthasomphone",
+        "date": "1991",
+        "lieu": "Wisconsin",
+        "moyen_execution": "Assassiné"
+      }
+    ]
   }
 ]
