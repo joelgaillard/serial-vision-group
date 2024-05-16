@@ -8,6 +8,7 @@ body {
   background-color: #272727;
   font-family: "Montserrat", sans-serif;
   text-align: center;
+    margin-left: 2em;
 }
 
 h1 {
@@ -23,7 +24,8 @@ h2 {
   text-align: left;
   margin-right: 150px;
   color: white;
-  margin-top: -70px;
+  margin-top: -55px;
+  margin-bottom: 100px;
 }
 
 .options {
@@ -50,14 +52,35 @@ p {
   font-size: 20px;
 }
 
+.option input[type="radio"] {
+    display: none; /* Masque le bouton radio par défaut */
+}
+
 .option {
   margin-right: 10px;
   margin-bottom: 10px;
   flex-basis: calc(25% - 10px); /* Affiche les options comme des blocs */
 }
 
-.option p {
+
+.option label{
   color: white;
   font-size: 20px;
-  margin: 5px 0;
+  display: block;
+  padding: 10px 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+  background-color: #ca1414;
+  border: none;
+  border-radius: 5px;
+    cursor: pointer;
+    line-height: 2em;
+   
 }
+
+.option input[type="radio"]:checked + label {
+    background-color: white; /* Couleur de fond lorsque le bouton radio est sélectionné */
+    color: #ca1414; /* Couleur du texte lorsque le bouton radio est sélectionné */
+}
+
+
