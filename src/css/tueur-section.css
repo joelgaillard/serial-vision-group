@@ -96,6 +96,7 @@ h2 {
   margin-left: 40px;
   color: white;
   margin-top: 70px;
+  left: 0; 
 }
 
 
@@ -106,4 +107,7 @@ h3 {
   margin-right: 150px;
   color: white;
   margin-top: 70px;
+  right: 0;
 }
+
+
