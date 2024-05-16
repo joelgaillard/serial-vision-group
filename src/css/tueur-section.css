@@ -86,3 +86,24 @@ p.surnom {
   color: #ca1414;
   font-weight: bold;
 }
+
+
+h2 {
+  font-size: 50px;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  margin-right: 150px;
+  margin-left: 40px;
+  color: white;
+  margin-top: 70px;
+}
+
+
+h3 {
+  font-size: 50px;
+  font-family: "Montserrat", sans-serif;
+  text-align: right;
+  margin-right: 150px;
+  color: white;
+  margin-top: 70px;
+}
