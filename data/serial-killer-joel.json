@@ -3,7 +3,7 @@
     "id": 1,
     "nom": "Bundy",
     "prenom": "Ted",
-    "surnom": "Theodore Robert Bundy",
+    "surnom": "Lady Killer",
     "date_de_naissance": "24 novembre 1946",
     "peine_encourue": "Peine de mort",
     "moyen_execution": "Chaise électrique",
@@ -275,6 +275,7 @@
     "id": 2,
     "nom": "Dahmer",
     "prenom": "Jeffrey",
+    "surnom": "Le cannibale de Milwaukee",
     "date_de_naissance": "21 mai 1960",
     "peine_encourue": "Peine de mort",
     "moyen_execution": "Battu à mort par un co-détenu en prison",
@@ -954,74 +955,6 @@
         "date": "1976",
         "lieu": "Chicago",
         "moyen_execution": "Étranglement"
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "nom": "Gaillard",
-    "prenom": "Joel",
-    "surnom": "Jojo le rigolo",
-    "date_de_naissance": "5 février 2001",
-    "peine_encourue": "Rien, il est sympa comme mec",
-    "mort": false,
-    "portrait":"joel-gaillard.gif",
-    "victimes": [
-      {
-        "nom": "Raymond",
-        "prenom": "Smith",
-        "date": "1990",
-        "lieu": "Wisconsin",
-        "moyen_execution": "Assassiné"
-      },
-      {
-        "nom": "Edward",
-        "prenom": "Smith",
-        "date": "1990",
-        "lieu": "Wisconsin",
-        "moyen_execution": "Assassiné"
-      },
-      {
-        "nom": "Ernest",
-        "prenom": "Miller",
-        "date": "1990",
-        "lieu": "Wisconsin",
-        "moyen_execution": "Assassiné"
-      },
-      {
-        "nom": "David",
-        "prenom": "Thomas",
-        "date": "1990",
-        "lieu": "Wisconsin",
-        "moyen_execution": "Assassiné"
-      },
-      {
-        "nom": "Curtis",
-        "prenom": "Straughter",
-        "date": "1991",
-        "lieu": "Wisconsin",
-        "moyen_execution": "Assassiné"
-      },
-      {
-        "nom": "Errol",
-        "prenom": "Lindsey",
-        "date": "1991",
-        "lieu": "Wisconsin",
-        "moyen_execution": "Assassiné"
-      },
-      {
-        "nom": "Tony",
-        "prenom": "Hughes",
-        "date": "1991",
-        "lieu": "Wisconsin",
-        "moyen_execution": "Assassiné"
-      },
-      {
-        "nom": "Konerak",
-        "prenom": "Sinthasomphone",
-        "date": "1991",
-        "lieu": "Wisconsin",
-        "moyen_execution": "Assassiné"
       }
     ]
   }

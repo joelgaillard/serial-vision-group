@@ -83,4 +83,15 @@ p {
     color: #ca1414; /* Couleur du texte lorsque le bouton radio est sélectionné */
 }
 
+.button2 {
+  padding: 20px 30px;
+  background-color: white;
+  color: #ca1414;
+  text-decoration: none;
+  border-radius: 5px;
+}
 
+.button2:hover {
+  background-color: #ca1414;
+  color: white;
+}

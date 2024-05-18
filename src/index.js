@@ -57,6 +57,12 @@ const routeur = () => {
         displaySection('about')
         loadSectionCSS()
       break;
+
+      case '#jesuis':
+        const tueurRandom = Math.floor(Math.random() * 6) + 1;
+        const newHash = `#tueurs-${tueurRandom}`;
+        window.location.hash = newHash;
+        break;
     }
   }
   

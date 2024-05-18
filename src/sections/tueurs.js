@@ -155,63 +155,39 @@ svg.selectAll(".domain") // Sélectionne la ligne de l'axe (la barre)
 };
 
 const displayCarte = async (id) => {
-
-    const geographicData = await loadMap();
-
-
+        const geographicData = await loadMap();
         const tueur = await loadKillerById(id);
-
         const stateData = {};
 
-        // Parcourir chaque victime
         tueur.victimes.forEach(victim => {
             const state = victim.lieu;
-            const nbVictims = 1; // Chaque victime compte pour 1, vous pouvez ajuster cela si nécessaire
-            
-            // Vérifier si l'état existe déjà dans stateData, sinon le créer
+            const nbVictims = 1; 
             if (!stateData[state]) {
-                stateData[state] = {
-                    state: state,
-                    nbvictims: nbVictims,
-                    victims: [] // Initialiser la liste des victimes pour cet état
-                };
+                stateData[state] = { state: state, nbvictims: nbVictims, victims: [] };
             } else {
-                // Mettre à jour le nombre de victimes pour cet état
                 stateData[state].nbvictims += nbVictims;
             }
-            
-            // Ajouter la victime à la liste des victimes pour cet état
             stateData[state].victims.push(victim);
         });
-        
-        // Convertir stateData en tableau pour pouvoir itérer dessus
+
         const dataArray = Object.values(stateData);
         console.warn(dataArray);
-    
 
         const margin = { top: 10, right: 40, bottom: 30, left: 40 },
             width = 1000 - margin.left - margin.right,
             height = 500 - margin.top - margin.bottom;
 
-        // // Sequential scale pour l'échelle chromatique
-        // const colorScale = d3.scaleSequential([0, d3.max(cantonData, d => d.resultat.jaStimmenInProzent)], d3.interpolatePurples)
-
-        // Projection
         const projection = d3.geoMercator()
             .fitExtent([[0, 0], [width, height]], geographicData);
 
-        const path = d3.geoPath()
-            .projection(projection)
-        // Ajouter le svg
+        const path = d3.geoPath().projection(projection);
         const monSvg = d3.select("#map")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom);
 
-        const carte = monSvg
-            .append("g")
+        const carte = monSvg.append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        // Créer un groupe pour le tooltip
         const tooltip = d3.select("body")
             .append("div")
             .style("position", "absolute")
@@ -220,52 +196,74 @@ const displayCarte = async (id) => {
             .style("border", "1px solid black")
             .style("padding", "5px");
 
-     // Trouver le nombre maximal de victimes parmi tous les états
-const maxVictims = Math.max(...dataArray.map(state => state.nbvictims));
+        const maxVictims = Math.max(...dataArray.map(state => state.nbvictims));
 
-// Définir l'échelle de couleur
-// Définir l'échelle de couleur
-const colorScale = d3.scaleLinear()
-    .domain([0, maxVictims]) // Domaine de l'échelle: de 0 à maxVictims
-    .range(["#272727", "#ca1414"]) // Plage de l'échelle: du blanc au rouge
+        const colorScale = d3.scaleLinear()
+            .domain([0, maxVictims])
+            .range(["#FFC4C4", "#ca1414"]);
 
-// Appliquer la couleur en fonction du nombre de victimes
-carte.selectAll("path")
-    // Chargement des données ( !! data.features ) 
-    .data(geographicData.features)
-    .join(enter => enter.append('path')
-        .attr("d", path)
-        .attr("id", d => d.properties.NAME)
-        .attr("fill", d => {
-            const stateInfo = dataArray.find(state => state.state === d.properties.NAME);
-            return stateInfo ? colorScale(stateInfo.nbvictims) : "#272727";
-        })
-        .attr("stroke", "white") // Couleur du contour en noir
-        .attr("stroke-width", 1)
-        .on("mouseover", function (event, d) {
-            const stateInfo = dataArray.find(state => state.state === d.properties.NAME);
-            if (stateInfo && stateInfo.nbvictims > 0) {
-                const nbVictims = stateInfo.nbvictims;
-                const victimsList = stateInfo.victims.map(victim => victim.nom).join(", ");
-                d3.select(this)
-                    .attr("stroke-width", 3);
-                tooltip.style("visibility", "visible")
-                    .html(`<strong>${d.properties.NAME}</strong><br/>Nombre de victimes: ${nbVictims}<br/>Liste des victimes: ${victimsList}`);
-            }
-        })
-        .on("mousemove", function (event) {
-            tooltip.style("top", (event.pageY - 10) + "px")
-                .style("left", (event.pageX + 10) + "px");
-        })
-        .on("mouseout", function () {
-            d3.select(this)
-                .attr("stroke-width", 1);
-            tooltip.style("visibility", "hidden");
-        }));
-            }
+        carte.selectAll("path")
+            .data(geographicData.features)
+            .join(enter => enter.append('path')
+                .attr("d", path)
+                .attr("id", d => d.properties.NAME)
+                .attr("fill", d => {
+                    const stateInfo = dataArray.find(state => state.state === d.properties.NAME);
+                    return stateInfo ? colorScale(stateInfo.nbvictims) : "#272727";
+                })
+                .attr("stroke", "white")
+                .attr("stroke-width", 1)
+                .on("mouseover", function (event, d) {
+                    const stateInfo = dataArray.find(state => state.state === d.properties.NAME);
+                    if (stateInfo && stateInfo.nbvictims > 0) {
+                        const nbVictims = stateInfo.nbvictims;
+                        const victimsList = stateInfo.victims.map(victim => victim.nom).join(", ");
+                        d3.select(this).attr("stroke-width", 3);
+                        tooltip.style("visibility", "visible")
+                            .html(`<strong>${d.properties.NAME}</strong><br/>Nombre de victimes: ${nbVictims}<br/>Liste des victimes: ${victimsList}`);
+                    }
+                })
+                .on("mousemove", function (event) {
+                    tooltip.style("top", (event.pageY - 10) + "px")
+                        .style("left", (event.pageX + 10) + "px");
+                })
+                .on("mouseout", function () {
+                    d3.select(this).attr("stroke-width", 1);
+                    tooltip.style("visibility", "hidden");
+                }));
+
+        const numBlocks = 10;
+        const legendData = d3.range(numBlocks).map(i => i / (numBlocks - 1) * maxVictims);
+
+        document.querySelector('#colorScale').innerHTML ="";
+
+        const colorContainer = d3.select('#colorScale')
+            .style("display", "flex")
+            .style("flex-direction", "row")
+            .style("align-items", "center");
+
+        const colorBlocksContainer = colorContainer.append('div')
+            .style("display", "flex")
+            .style("flex-direction", "row")
+            .style("align-items", "center");
+
+            colorContainer.append('div')
+            .style('margin-right', '5px')
+            .style('font-size', '14px')
+            .style('color', 'white')
+            .style("align-items", "left")
+            .text('Nombre de vcitimes par ordre croissant')
 
 
-
-
+        colorBlocksContainer.selectAll('.colorBlock')
+            .data(legendData)
+            .enter()
+            .append('div')
+            .attr('class', 'colorBlock')
+            .style('width', '20px')
+            .style('height', '20px')
+            .style('background-color', d => colorScale(d))
+            .style('margin', '2px');
+    };
 
 export { displayKillers, displayKiller, displayDiagramme, displayCarte }
