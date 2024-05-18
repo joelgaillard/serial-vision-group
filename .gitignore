@@ -4,3 +4,5 @@ package-lock.json
 data/USA.json
 essaicarte.html
 serial-killers-avec-joel.json
+# Local Netlify folder
+.netlify
