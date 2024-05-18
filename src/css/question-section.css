@@ -84,6 +84,8 @@ p {
 }
 
 .button2 {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
   padding: 20px 30px;
   background-color: white;
   color: #ca1414;

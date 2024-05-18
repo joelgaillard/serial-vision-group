@@ -216,8 +216,19 @@ const displayCarte = async (id) => {
                 .on("mouseover", function (event, d) {
                     const stateInfo = dataArray.find(state => state.state === d.properties.NAME);
                     if (stateInfo && stateInfo.nbvictims > 0) {
+                        let victimsList;
+                        if (stateInfo.victims.some(victim => victim.nom === "Victime inconnue")) {
+                            const knownVictims = stateInfo.victims.filter(victim => victim.nom !== "Victime inconnue");
+                            const unknownVictimsCount = stateInfo.victims.length - knownVictims.length;
+                            const unknownVictimsLabel = unknownVictimsCount === 1 ? "victime inconnue" : "victimes inconnues";
+                            victimsList = knownVictims.map(victim => victim.nom).join(", ");
+                            if (unknownVictimsCount > 0) {
+                                victimsList += `, ${unknownVictimsCount} ${unknownVictimsLabel}`;
+                            }
+                        } else {
+                            victimsList = stateInfo.victims.map(victim => victim.nom).join(", ");
+                        }
                         const nbVictims = stateInfo.nbvictims;
-                        const victimsList = stateInfo.victims.map(victim => victim.nom).join(", ");
                         d3.select(this).attr("stroke-width", 3);
                         tooltip.style("visibility", "visible")
                             .html(`<strong>${d.properties.NAME}</strong><br/>Nombre de victimes: ${nbVictims}<br/>Liste des victimes: ${victimsList}`);
@@ -252,7 +263,7 @@ const displayCarte = async (id) => {
             .style('font-size', '14px')
             .style('color', 'white')
             .style("align-items", "left")
-            .text('Nombre de vcitimes par ordre croissant')
+            .text('Nombre de victimes par état par ordre croissant')
 
 
         colorBlocksContainer.selectAll('.colorBlock')

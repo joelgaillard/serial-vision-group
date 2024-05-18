@@ -18,6 +18,16 @@
         <a href="#question" class="button1">Quel tueur en série es-tu ?</a>
         <a href="#about" class="button2">Parcourir les données</a>
       </div>
+      <p id="source"><strong>Sources utilisées pour le projet</strong> 
+        <br>
+        Geojson de la carte en hexagone et données du nombre de meurtres par état des USA: <strong>worldpopulationreview.com</strong>
+        <br>
+        Geojson de la carte des USA:  <strong>github.com/kjhealy</strong>
+        <br>
+        Données précises sur chaque tueur en série: <strong>wikipedia.org</strong>
+      </p>
+
+
     </section>
 
     <section id="about-section">
@@ -74,6 +84,7 @@
         </div>
         <div class="map-container">
           <h2>Carte des États-Unis</h2>
+          <div id="colorScaleHexgonMap"></div>
           <div class="hex-map">
             <svg id="hexagon-map" width="1500" height="750"></svg>
           </div>

@@ -1,6 +1,6 @@
 const loadJson = (url) => fetch(url).then((response) => response.json());
 
-const loadKillers = () => loadJson("./data/serial-killer-joel.json");
+const loadKillers = () => loadJson("./data/serial-killers.json");
 
 const loadKillerById = (id) => {
     return loadKillers().then((killers) => {

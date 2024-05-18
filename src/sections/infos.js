@@ -72,7 +72,40 @@ const displayHexagonMap = async () => {
         .style("font-size", 11)
         .style("fill", "white")
         .style("font-family", "Montserrat");
-};
+
+        const numBlocks = 10;
+        const legendData = d3.range(numBlocks).map(i => i / (numBlocks - 1) * maxVictims);
+
+        document.querySelector('#colorScaleHexgonMap').innerHTML ="";
+
+        const colorContainer = d3.select('#colorScaleHexgonMap')
+            .style("display", "flex")
+            .style("flex-direction", "row")
+            .style("align-items", "center");
+
+        const colorBlocksContainer = colorContainer.append('div')
+            .style("display", "flex")
+            .style("flex-direction", "row")
+            .style("align-items", "center");
+
+            colorContainer.append('div')
+            .style('margin-right', '5px')
+            .style('font-size', '14px')
+            .style('color', 'white')
+            .style("align-items", "left")
+            .text('Nombre de morts par états entre 1992 et 2019, par ordre croissant')
+
+
+        colorBlocksContainer.selectAll('.colorBlock')
+            .data(legendData)
+            .enter()
+            .append('div')
+            .attr('class', 'colorBlock')
+            .style('width', '20px')
+            .style('height', '20px')
+            .style('background-color', d => colorScale(d))
+            .style('margin', '2px');
+    };
 
 
 const displayInfosDiagramme = async () => {

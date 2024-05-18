@@ -1,0 +1,945 @@
+[
+  {
+    "id": 1,
+    "nom": "Bundy",
+    "prenom": "Ted",
+    "surnom": "Lady Killer",
+    "date_de_naissance": "24 novembre 1946",
+    "peine_encourue": "Peine de mort",
+    "moyen_execution": "Chaise électrique",
+    "mort": true,
+    "portrait":"ted-bundy.jpg",
+    "date_deces": "24 janvier 1989",
+    "victimes": [
+      {
+        "nom": "Ann Marie",
+        "prenom": "Burr",
+        "date": "1962",
+        "lieu": "Washington",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Lonnie",
+        "prenom": "Trumbell",
+        "date": "1966",
+        "lieu": "Washington",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Lisa",
+        "prenom": "Wick",
+        "date": "1966",
+        "lieu": "Washington",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Rita",
+        "prenom": "Curran",
+        "date": "1971",
+        "lieu": "Vermont",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Rita Lorraine",
+        "prenom": "Jolly",
+        "date": "1973",
+        "lieu": "Oregon",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Vicki Lynn",
+        "prenom": "Hollar",
+        "date": "1973",
+        "lieu": "Oregon",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Joni",
+        "prenom": "Lenz",
+        "date": "1974",
+        "lieu": "Oregon",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Lynda Ann",
+        "prenom": "Healy",
+        "date": "1974",
+        "lieu": "Oregon",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Donna Gail",
+        "prenom": "Manson",
+        "date": "1974",
+        "lieu": "Oregon",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Susan E.",
+        "prenom": "Rancourt",
+        "date": "1974",
+        "lieu": "Oregon",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Roberta Kathleen",
+        "prenom": "Parks",
+        "date": "1974",
+        "lieu": "Oregon",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Brenda",
+        "prenom": "Baker",
+        "date": "1974",
+        "lieu": "Washington",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Brenda Carol",
+        "prenom": "Ball",
+        "date": "1974",
+        "lieu": "Washington",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Georgeann",
+        "prenom": "Hawkins",
+        "date": "1974",
+        "lieu": "Washington",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Janice Ann",
+        "prenom": "Ott",
+        "date": "1974",
+        "lieu": "Washington",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Denise",
+        "prenom": "Naslund",
+        "date": "1974",
+        "lieu": "Washington",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Auto-stoppeuse non identifiée",
+        "date": "1974",
+        "lieu": "Idaho",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Nancy",
+        "prenom": "Wilcox",
+        "date": "1974",
+        "lieu": "Utah",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Melissa",
+        "prenom": "Smith",
+        "date": "1974",
+        "lieu": "Utah",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Laura Ann",
+        "prenom": "Aime",
+        "date": "1974",
+        "lieu": "Utah",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Carol",
+        "prenom": "DaRonch",
+        "date": "1974",
+        "lieu": "Utah",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Debra",
+        "prenom": "Kent",
+        "date": "1974",
+        "lieu": "Utah",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Caryn",
+        "prenom": "Campbell",
+        "date": "1975",
+        "lieu": "Colorado",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Julie",
+        "prenom": "Cunningham",
+        "date": "1975",
+        "lieu": "Colorado",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Denise",
+        "prenom": "Oliverson",
+        "date": "1975",
+        "lieu": "Colorado",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Melanie",
+        "prenom": "Cooley",
+        "date": "1975",
+        "lieu": "Colorado",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Lynette",
+        "prenom": "Culver",
+        "date": "1975",
+        "lieu": "Idaho",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Susan",
+        "prenom": "Curtis",
+        "date": "1975",
+        "lieu": "Utah",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Shelley",
+        "prenom": "Robertson",
+        "date": "1975",
+        "lieu": "Colorado",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Nancy",
+        "prenom": "Baird",
+        "date": "1975",
+        "lieu": "Utah",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Debbie",
+        "prenom": "Smith",
+        "date": "1976",
+        "lieu": "Utah",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Karen",
+        "prenom": "Chandler",
+        "date": "1978",
+        "lieu": "Floride",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Kathy",
+        "prenom": "Kleiner",
+        "date": "1978",
+        "lieu": "Floride",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Lisa",
+        "prenom": "Levy",
+        "date": "1978",
+        "lieu": "Floride",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Margaret",
+        "prenom": "Bowman",
+        "date": "1978",
+        "lieu": "Floride",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Cheryl",
+        "prenom": "Thomas",
+        "date": "1978",
+        "lieu": "Floride",
+        "moyen_execution": "Inconnu"
+      },
+      {
+        "nom": "Kimberly",
+        "prenom": "Leach",
+        "date": "1978",
+        "lieu": "Floride",
+        "moyen_execution": "Inconnu"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nom": "Dahmer",
+    "prenom": "Jeffrey",
+    "surnom": "Le cannibale de Milwaukee",
+    "date_de_naissance": "21 mai 1960",
+    "peine_encourue": "Peine de mort",
+    "moyen_execution": "Battu à mort par un co-détenu en prison",
+    "mort": true,
+    "portrait":"jeffrey-dahmer.jpg",
+    "date_deces": "28 novembre 1994",
+    "victimes": [
+      {
+        "nom": "Steven Hicks",
+        "date": 1978,
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Steven Tuomi",
+        "date": 1987,
+        "lieu": "Wisconsin"
+      },
+      {
+        "nom": "James Doxtator",
+        "date": 1988,
+        "lieu": "Wisconsin"
+      },
+      {
+        "nom": "Richard Guerrero",
+        "date": 1988,
+        "lieu": "Wisconsin"
+      },
+      {
+        "nom": "Anthony Sears",
+        "date": 1991,
+        "lieu": "Wisconsin"
+      },
+      {
+        "nom": "Raymond Smith",
+        "date": 1991,
+        "lieu": "Wisconsin"
+      },
+      {
+        "nom": "Edward Smith",
+        "date": 1991,
+        "lieu": "Wisconsin"
+      },
+      {
+        "nom": "Ernest Miller",
+        "date": 1991,
+        "lieu": "Wisconsin"
+      },
+      {
+        "nom": "David Thomas",
+        "date": 1991,
+        "lieu": "Wisconsin"
+      },
+      {
+        "nom": "Curtis Straughter",
+        "date": 1991,
+        "lieu": "Wisconsin"
+      },
+      {
+        "nom": "Errol Lindsey",
+        "date": 1991,
+        "lieu": "Wisconsin"
+      },
+      {
+        "nom": "Tony Hughes",
+        "date": 1991,
+        "lieu": "Wisconsin"
+      },
+      {
+        "nom": "Konerak Sinthasomphone",
+        "date": 1991,
+        "lieu": "Wisconsin"
+      },
+      {
+        "nom": "Matt Turner",
+        "date": 1991,
+        "lieu": "Wisconsin"
+      },
+      {
+        "nom": "Jeremiah Weinberger",
+        "date": 1991,
+        "lieu": "Wisconsin"
+      },
+      {
+        "nom": "Oliver Lacy",
+        "date": 1991,
+        "lieu": "Wisconsin"
+      },
+      {
+        "nom": "Joseph Bradehoft",
+        "date": 1991,
+        "lieu": "Wisconsin"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nom": "Little",
+    "prenom": "Samuel",
+    "surnom": "Le Picasso du crime",
+    "date_de_naissance": "7 juin 1940",
+    "peine_encourue": "Prison à perpétuité",
+    "mort": false,
+    "portrait":"samuel-little.jpg",
+    "victimes": [
+      {
+        "nom": "Mary Brosley",
+        "date": "1982",
+        "lieu": "Florida"
+      },
+      {
+        "nom": "Melinda LaPree",
+        "date": "1982",
+        "lieu": "Florida"
+      },
+      {
+        "nom": "Mary Chapman",
+        "date": "1970",
+        "lieu": "Florida"
+      },
+      {
+        "nom": "Arlene Dunn",
+        "date": "1971",
+        "lieu": "Florida"
+      },
+      {
+        "nom": "Lillian Dunn",
+        "date": "1971",
+        "lieu": "Florida"
+      },
+      {
+        "nom": "Elizabeth Evans",
+        "date": "1976",
+        "lieu": "Florida"
+      },
+      {
+        "nom": "Carol Alford",
+        "date": "1982",
+        "lieu": "Georgia"
+      },
+      {
+        "nom": "Audrey Nelson",
+        "date": "1983",
+        "lieu": "Georgia"
+      },
+      {
+        "nom": "Ann Marie Parker",
+        "date": "1971",
+        "lieu": "Mississippi"
+      },
+      {
+        "nom": "Jessie Lee Cooks",
+        "date": "1984",
+        "lieu": "Mississippi"
+      },
+      {
+        "nom": "Alice Jasmine Sanders",
+        "date": "1984",
+        "lieu": "Mississippi"
+      },
+      {
+        "nom": "Melissa Thomas",
+        "date": "1996",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Melissa Tuggle",
+        "date": "1981",
+        "lieu": "Georgia"
+      },
+      {
+        "nom": "Katherine Johnson",
+        "date": "1971",
+        "lieu": "Louisiana"
+      },
+      {
+        "nom": "Peaches",
+        "date": "1981",
+        "lieu": "Louisiana"
+      },
+      {
+        "nom": "Cora Lee Brooks",
+        "date": "1982",
+        "lieu": "Louisiana"
+      },
+      {
+        "nom": "Daisy McGuire",
+        "date": "1996",
+        "lieu": "Texas"
+      },
+      {
+        "nom": "Vera Richardson",
+        "date": "1982",
+        "lieu": "Texas"
+      },
+      {
+        "nom": "Dorthea Howard",
+        "date": "1980",
+        "lieu": "California"
+      },
+      {
+        "nom": "Mary Ann Carol",
+        "date": "1971",
+        "lieu": "Georgia"
+      },
+      {
+        "nom": "Ella Mae Carter",
+        "date": "1984",
+        "lieu": "Florida"
+      },
+      {
+        "nom": "Hazel Brown",
+        "date": "1980",
+        "lieu": "Louisiana"
+      },
+      {
+        "nom": "Mary Ruth Jones",
+        "date": "1980",
+        "lieu": "Louisiana"
+      },
+      {
+        "nom": "Mary Jo Pratt",
+        "date": "1980",
+        "lieu": "Texas"
+      },
+      {
+        "nom": "Carrie Brown",
+        "date": "1970",
+        "lieu": "Florida"
+      },
+      {
+        "nom": "Deborah Kaye Stone",
+        "date": "1983",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Shirley Marie Crocker",
+        "date": "1982",
+        "lieu": "Georgia"
+      },
+      {
+        "nom": "Shirley Ann Dean",
+        "date": "1993",
+        "lieu": "Texas"
+      },
+      {
+        "nom": "Phyllis Tamm",
+        "date": "1971",
+        "lieu": "Mississippi"
+      },
+      {
+        "nom": "Betty Jones",
+        "date": "1971",
+        "lieu": "Mississippi"
+      },
+      {
+        "nom": "Sheila Farmer",
+        "date": "1984",
+        "lieu": "Louisiana"
+      },
+      {
+        "nom": "Lizzie Williams",
+        "date": "1984",
+        "lieu": "Louisiana"
+      },
+      {
+        "nom": "Priscilla Baxter",
+        "date": "1982",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Anna Stewart",
+        "date": "1970",
+        "lieu": "Georgia"
+      },
+      {
+        "nom": "Mary Rachel Hicks",
+        "date": "1982",
+        "lieu": "Georgia"
+      },
+      {
+        "nom": "Hazel Washington",
+        "date": "1982",
+        "lieu": "Texas"
+      },
+      {
+        "nom": "Margie Reed",
+        "date": "1982",
+        "lieu": "Texas"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1977",
+        "lieu": "Louisiana"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1982",
+        "lieu": "Louisiana"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1982",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1983",
+        "lieu": "Georgia"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1984",
+        "lieu": "Florida"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1973",
+        "lieu": "California"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1974",
+        "lieu": "California"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1977",
+        "lieu": "Mississippi"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1981",
+        "lieu": "Louisiana"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1982",
+        "lieu": "Texas"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1992",
+        "lieu": "Texas"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1990",
+        "lieu": "Florida"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1983",
+        "lieu": "California"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1976",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1976",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1976",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1977",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1980",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1980",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1981",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1981",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1981",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1981",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1982",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1982",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1983",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1983",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1984",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1985",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1986",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1989",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1990",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1991",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1991",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1992",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1992",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1992",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1993",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1994",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1994",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1994",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1994",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1995",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1995",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1995",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1995",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1995",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1995",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1996",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1996",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Melinda Rose LaPree",
+        "date": "1982",
+        "lieu": "Mississippi"
+      },
+      {
+        "nom": "Tammy Jo Alexander",
+        "date": "1977",
+        "lieu": "Kentucky"
+      },
+      {
+        "nom": "Rosie Hill",
+        "date": "1980",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Martha Cunningham",
+        "date": "1974",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Sarah Dean",
+        "date": "1990",
+        "lieu": "Ohio"
+      },
+      {
+        "nom": "Victime inconnue",
+        "date": "1993",
+        "lieu": "Ohio"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nom": "Kemper",
+    "prenom": "Edmund",
+    "surnom": "L'ogre de Santa Cruz",
+    "date_de_naissance": "18 décembre 1948",
+    "peine_encourue": "Prison à perpétuité",
+    "mort": false,
+    "portrait":"edmund-kemper.jpg",
+    "victimes": [
+      {"nom": "Maud Kemper (sa grand-mère)", "date": "1964", "lieu": "California"},
+      {"nom": "Edmund Kemper senior (son grand-père)", "date": "1964", "lieu": "California"},
+      {"nom": "Mary Ann Pesce", "date": "1972", "lieu": "California"},
+      {"nom": "Anita Luchessa", "date": "1972", "lieu": "California"},
+      {"nom": "Aiko Koo", "date": "1972", "lieu": "California"},
+      {"nom": "Cindy Schall", "date": "1973", "lieu": "California"},
+      {"nom": "Rosalind Thorpe", "date": "1973", "lieu": "California"},
+      {"nom": "Alice Liu", "date": "1973", "lieu": "California"},
+      {"nom": "Clarnell Strandberg Kemper (sa maman)", "date": "1973", "lieu": "California"},
+      {"nom": "Sally Hallett", "date": "1973", "lieu": "California"}
+    ]
+  },
+  {
+    "id": 5,
+    "nom": "Ramirez",
+    "prenom": "Richard",
+    "surnom": "Night Stalker",
+    "date_de_naissance": "29 février 1960",
+    "peine_encourue": "Peine de mort",
+    "moyen_execution": "Mort naturelle en prison",
+    "mort": true,
+    "portrait":"richard-ramirez.jpg",
+    "date_deces": "7 juin 2013",
+    "victimes": [
+      {"nom": "Jennie Vincow", "date": "1984", "lieu": "California"},
+      {"nom": "Dayle Okazaki", "date": "1984", "lieu": "California"},
+      {"nom": "Maria Hernandez", "date": "1984", "lieu": "California"},
+      {"nom": "Tsai-Lian Yu", "date": "1984", "lieu": "California"},
+      {"nom": "Vincent Zazzara", "date": "1985", "lieu": "California"},
+      {"nom": "Maxine Zazzara", "date": "1985", "lieu": "California"},
+      {"nom": "William Doi", "date": "1985", "lieu": "California"},
+      {"nom": "Mabel Bell", "date": "1985", "lieu": "California"},
+      {"nom": "Mary Louise Cannon", "date": "1985", "lieu": "California"},
+      {"nom": "Joyce Lucille Nelson", "date": "1985", "lieu": "California"},
+      {"nom": "Lela Kneiding", "date": "1985", "lieu": "California"},
+      {"nom": "Patty Higgins", "date": "1985", "lieu": "California"},
+      {"nom": "Max Kneiding", "date": "1985", "lieu": "California"}
+    ]
+  },
+  {
+    "id": 6,
+    "nom": "Gacy",
+    "prenom": "John",
+    "surnom": "The Killer Clown",
+    "date_de_naissance": "17 mars 1942",
+    "peine_encourue": "Peine de mort",
+    "moyen_execution": "Injection Létale",
+    "mort": true,
+    "date_deces": "10 mai 1994",
+    "portrait":"john-gacy.jpg",
+    "victimes": [
+      {"nom": "Timothy McCoy", "date": "1972", "lieu": "Illinois"},
+      {"nom": "John Butkovich", "date": "1975", "lieu": "Illinois"},
+      {"nom": "Darrell Sampson", "date": "1976", "lieu": "Illinois"},
+      {"nom": "Randall Reffett", "date": "1976", "lieu": "Illinois"},
+      {"nom": "Samuel Stapleton", "date": "1976", "lieu": "Illinois"},
+      {"nom": "Michael Bonnin", "date": "1976", "lieu": "Illinois"},
+      {"nom": "William Carroll", "date": "1976", "lieu": "Illinois"},
+      {"nom": "Rick Johnston", "date": "1976", "lieu": "Illinois"},
+      {"nom": "Kenneth Parker", "date": "1976", "lieu": "Illinois"},
+      {"nom": "Michael Marino", "date": "1976", "lieu": "Illinois"},
+      {"nom": "Gregory Godzik", "date": "1976", "lieu": "Illinois"},
+      {"nom": "John Szyc", "date": "1976", "lieu": "Illinois"},
+      {"nom": "Jon Prestidge", "date": "1976", "lieu": "Illinois"},
+      {"nom": "Matthew Bowman", "date": "1976", "lieu": "Illinois"},
+      {"nom": "Robert Gilroy", "date": "1977", "lieu": "Illinois"},
+      {"nom": "John Mowery", "date": "1977", "lieu": "Illinois"},
+      {"nom": "Russell Nelson", "date": "1977", "lieu": "Illinois"},
+      {"nom": "Robert Winch", "date": "1977", "lieu": "Illinois"},
+      {"nom": "Tommy Boling", "date": "1977", "lieu": "Illinois"},
+      {"nom": "David Talsma", "date": "1977", "lieu": "Illinois"},
+      {"nom": "William Bundy", "date": "1978", "lieu": "Illinois"},
+      {"nom": "Michael Bonnin", "date": "1978", "lieu": "Illinois"},
+      {"nom": "Gregory Godzik", "date": "1978", "lieu": "Illinois"},
+      {"nom": "John Butkovich", "date": "1978", "lieu": "Illinois"},
+      {"nom": "John Szyc", "date": "1978", "lieu": "Illinois"},
+      {"nom": "Robert Winch", "date": "1978", "lieu": "Illinois"},
+      {"nom": "Russell Nelson", "date": "1978", "lieu": "Illinois"},
+      {"nom": "Robert Gilroy", "date": "1978", "lieu": "Illinois"},
+      {"nom": "Timothy O'Rourke", "date": "1978", "lieu": "Illinois"},
+      {"nom": "Frank Landingin", "date": "1978", "lieu": "Illinois"},
+      {"nom": "James Haakenson", "date": "1978", "lieu": "Illinois"},
+      {"nom": "Michael Bonnin", "date": "1978", "lieu": "Illinois"}
+    ]
+  }
+]
